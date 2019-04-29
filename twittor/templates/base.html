@@ -9,6 +9,11 @@
     <title>welocom to Twittor</title>
 </head>
 <body>
-    <div>Twittor: <a href="/">Home</a></div>
+    <div>
+        Twittor: <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('login')}}">Login</a>
+    </div>
+    
+    <hr>
     {%block content%}{%endblock%}
 </body>

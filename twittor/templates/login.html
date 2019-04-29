@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+{%block content%}
+    <h1>Login</h1>
+    <form action="" method="post">
+        <p>
+            {{ form.username.label}}
+            {{form.username()}}
+            <!-- <label for="">Username</label>
+            <input type="text" name="" id=""> -->
+        </p>
+        <p>
+            {{form.password.label}}
+            {{form.password()}}
+            <!-- <label for="">Password</label>
+            <input type="password" name="" id=""> -->
+        </p>
+        <p>
+            {{form.remember_me.label}}
+            {{form.remember_me()}}
+            <!-- <input type="checkbox" name="" id="">
+            <label for="">Remeber Me</label> -->
+        </p>
+        <p>
+            {{form.submit()}}
+            <!-- <input type="submit" value="Login"> -->
+        </p>
+    </form>
+{%endblock%}
