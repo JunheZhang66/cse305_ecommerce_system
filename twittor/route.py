@@ -1,5 +1,7 @@
 from flask import render_template, redirect, url_for
 from twittor.forms import LoginForm
+from twittor.models import User, Tweet
+
 def index():
     name = {'username': 'root'}
     posts = [
