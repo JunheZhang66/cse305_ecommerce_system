@@ -48,6 +48,13 @@ class User(UserMixin,db.Model):
     def is_following(self, user):
         return self.followed.filter(
             followers.c.followed_id == user.id).count() >0
+    def own_and_followed_tweets(self):
+        followed = Tweet.query.join(
+            followers, (followers.c.followed_id == Tweet.user_id)).filter(
+                followers.c.follower_id == self.id)
+        own = Tweet.query.filter_by(user_id=self.id)
+        return followed.union(own).order_by(Tweet.create_time.desc())
+        
         
 @login_manager.user_loader
 def load_user(id):

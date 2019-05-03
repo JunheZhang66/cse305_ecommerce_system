@@ -5,7 +5,6 @@ from flask_login import login_user, current_user, logout_user, login_required
 from twittor import db
 @login_required
 def index():
-    # name = {'username': current_user.username}
     posts = [
         {
             'author': {'username': 'root'},
@@ -20,6 +19,7 @@ def index():
             'body': "hi I'm test1!"
         },        
     ]
+
     return render_template('index.html',  posts=posts)
 def login():
     # form = LoginForm(csrf_enabled = False)
@@ -66,16 +66,18 @@ def user(username):
     # if not u and u!=current_user:
     if u is None:
         abort(404)
-    posts = [
-        {
-            'author': {'username': u.username},
-            'body': "hi I'm {}!".format(u.username)
-        },
-        {
-            'author': {'username': u.username},
-            'body': "hi I'm {}!".format(u.username)
-        },      
-    ]
+    # posts = [
+    #     {
+    #         'author': {'username': u.username},
+    #         'body': "hi I'm {}!".format(u.username)
+    #     },
+    #     {
+    #         'author': {'username': u.username},
+    #         'body': "hi I'm {}!".format(u.username)
+    #     },      
+    # ]
+    # posts = Tweet.query.filter_by(author=u)
+    posts = u.tweets
     if request.method =='POST':
         if request.form['request_button'] == 'Follow':
             current_user.follow(u)
