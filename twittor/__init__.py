@@ -4,11 +4,13 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from twittor.config import Config
 
+
 db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
 login_manager.login_view = 'login'
-from twittor.route import index, login, logout
+
+from twittor.route import index, login, logout, register, user, edit_profile
 
 def create_app():
     app = Flask(__name__)
@@ -22,4 +24,8 @@ def create_app():
     app.add_url_rule('/','index',index)
     app.add_url_rule('/login','login',login, methods=['GET','POST'])
     app.add_url_rule('/logout', 'logout', logout)
+    app.add_url_rule('/register','register', register,methods=['GET','POST'])
+    app.add_url_rule('/<username>','profile',user,methods=['GET','POST'])
+    # app.add_url_rule('/edit_profile','edit_profile',edit_profile,methods=['GET','POST'])
+    app.add_url_rule('/edit_profile', 'edit_profile', edit_profile, methods=['GET', 'POST'])
     return app

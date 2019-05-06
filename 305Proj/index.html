@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license. 
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Business 2</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                	<span class="glyphicon glyphicon-heart"></span> 
+                	TaoBaoBao
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#C1">Products</a>
+                    <!-- </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="about-us">
+							<li><a href="#">Engage</a></li>
+							<li><a href="#">Pontificate</a></li>
+							<li><a href="#">Synergize</a></li>
+						</ul>
+					</li> -->
+					
+                    <li>
+                        <a href="user.html">My Account</a>
+                    </li>
+
+                    <li>
+                    		<a  href="checkout.html">
+                    			<span class="glyphicon glyphicon-shopping-cart"></span> My Cart</a>        			
+                    </li>
+                    <li>
+						<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary" type="button" style=" background-color: white; border-style: none;">
+						<a style="color: grey; margin:5px;">Sign Up</a>
+						</button>
+						
+					</li>
+
+					<li>
+						<button onclick="document.getElementById('id02').style.display='block'" class="btn btn-primary" type="button" style="background-color: white; border-style: none;">
+						<a style="color: grey ;margin:5px;">Sign In</a>
+						</button>
+					</li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+
+	<!-- Feature -->
+	<div class="jumbotron feature">
+		<div class="container">
+			<h1><span class="glyphicon glyphicon-heart"></span> Welcome to TAOBAOBAO</h1>
+			<p><span class="glyphicon glyphicon-star-empty"></span>Shop your favourate product and get the best price here!!!</p>
+			<p><a class="btn btn-primary" href="#C1">Shop Now</a></p>
+		</div>
+	</div>
+
+
+    <!-- Heading -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="text-center">Highlights</h1>
+                <p class="lead text-center">Wide variety of products:) Lower Cost than traditional shopping and selling:) Less time consuming and faster consumer consumption:) Transparent business system:)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promos -->
+	<div class="container-fluid">
+        <div class="row promo">
+        	<a href="#C1">
+				<div class="col-md-4 promo-item item-1">
+					<h3>
+						Best Quality
+					</h3>
+				</div>
+            </a>
+            <a href="#C1">
+				<div class="col-md-4 promo-item item-2">
+					<h3>
+						Best Price
+					</h3>
+				</div>
+            </a>
+			
+			<a href="#C1">
+				<div class="col-md-4 promo-item item-3">
+					<h3>
+						Best Shopping mood
+					</h3>
+				</div>
+            </a>
+        </div>
+    </div><!-- /.container-fluid -->
+
+	<!-- Featured Products -->
+	<div class="container">
+		<h1 class="text-center">World Class Products</h1>
+		<div class="row">
+			<!-- Product 1 -->
+			<div class="col-sm-6 col-md-3" id = "C1">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="images/pepper.jpg" alt="">
+					</a>
+					<div class="caption">
+						<h3>Premium Niche</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price">$10.45</p>
+
+						<!-- Input Group -->
+						<form id = "form1">
+						<div class="input-group" >
+							<input type="number" class="form-control" value="1" name="number" style="margin: auto">
+								<input type = "hidden" name="productName" value = "Premium Niche">
+									<span class="input-group-btn">
+										<button style="margin: auto" id = "button1" onclick="document.getElementById('modal-wrapper').style.display='block'; myFunction()"  class="btn btn-primary" type="button">
+											<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+											 Add to Cart
+										</button> 
+									</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 2 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="images/jars.jpg" alt="">
+					</a>
+					<div class="caption">
+						<h3>Handy Holistic</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price"><s>$24.99</s> $18.99</p>
+
+						<!-- Input Group -->
+						<form>
+						<div class="input-group">
+							<input type="number" class="form-control" value="1" style="margin: auto">
+							<span class="input-group-btn">
+								<button style="margin: auto" onclick="document.getElementById('modal-wrapper').style.display='block'; myFunction()" class="btn btn-primary" type="button">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+									Add to Cart
+								</button>
+							</span>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 3 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="images/pot.jpg" alt="">
+					</a>
+					<div class="caption">
+						<h3>Seamless Strategic</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price">$11.50</p>
+
+						<!-- Input Group -->
+						<form>
+						<div class="input-group">
+							<input type="number" class="form-control" value="1" style="margin: auto">
+							<span class="input-group-btn">
+								<button style="margin: auto" onclick="document.getElementById('modal-wrapper').style.display='block'; myFunction()" class="btn btn-primary" type="button">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+									Add to Cart
+								</button>
+							</span>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product 4 -->
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail featured-product">
+					<a href="#">
+						<img src="images/teapot.jpg" alt="">
+					</a>
+					<div class="caption">
+						<h3>Maintained Strip</h3>
+						<p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+						<p class="price">$45.50</p>
+
+						<!-- Input Group -->
+						<form>
+						<div class="input-group">
+							<input type="number" class="form-control" value="1" style="margin: auto">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" onclick="document.getElementById('modal-wrapper').style.display='block'; myFunction()" type="button" style="margin: auto">
+									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+									Add to Cart
+								</button>
+							</span>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    </div><!-- /.container -->
+	
+	<!-- 
+	<div class="container text-center">
+		<h1>Unparalleled Service</h1>
+		<p class="lead">Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products without collateral.</p>
+		<img class="img-responsive img-circle center-block" src="images/service.jpg" alt="">
+	</div><!--/.container--> -->
+	
+		
+	<!-- Footer -->
+	<footer>
+	
+		<h1 class="text-center">Find Us</h1>
+		<!-- Map -->
+		<div class="footer-map"></div>	
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 footer-info-item text-center">
+						<p class="lead">
+							500 circle Rd, Stony Brook, New York
+						</p>
+						<h2>Contact Us</h2>
+						<p class="lead"><span class="glyphicon glyphicon-phone-alt"></span> +1(631) 506 6026<br>
+						info@example.com</p>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer Links -->
+		<div class="footer-info">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 footer-info-item">
+						<h3>Information</h3>
+						<ul class="list-unstyled">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Customer Service</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Sitemap</a></li>
+							<li><a href="#">Orders &amp; Returns</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 footer-info-item">
+						<h3>My Account</h3>
+						<ul class="list-unstyled">
+							<li><a href="#">Sign In</a></li>
+							<li><a href="#">View Cart</a></li>
+							<li><a href="#">My Wishlist</a></li>
+							<li><a href="#">Track My Order</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>	
+					</div>
+					<div class="col-sm-4 footer-info-item">
+						<h3><span class="glyphicon glyphicon-list-alt"></span> Newsletter</h3>
+						<p>Sign up for exclusive offers.</p>
+						<div class="input-group">
+							<input type="email" class="form-control" placeholder="Enter your email address">
+							<span class="input-group-btn">
+								<button class="btn btn-primary" type="button">
+									Subscribe!
+								</button>
+							</span>
+						</div>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+        </div>
+        
+        <!-- <!-- Copyright etc -->
+        <!-- <div class="small-print">
+        	<div class="container">
+        		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+        		<p>Copyright &copy; Example.com 2015 </p>
+        	</div>
+        </div> --> 
+        
+	</footer>
+<style>
+	*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 26px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	font-size:16px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 26px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+	font-size:20px;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    
+}
+.avatar {
+    width: 200px;
+	height:200px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    float: right;
+    background-color: rgba(0,0,0,0.4);
+    object-fit: cover;
+    z-index: 99 !important;
+
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 4% auto 15% auto;
+    border: 1px solid #888;
+    width: 100%; 
+	padding-bottom: 30px;
+	object-fit: cover;
+
+}
+
+/* The Close Button (x) */
+.close {
+
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: zoom 0.6s
+}
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+</style>
+</style>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+  z-index: 99 !important;
+}
+
+/* Modal Content/Box */
+.modal1-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body background="../1.png">
+
+<h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+
+<!-- <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
+Open Popup</button> -->
+<div id="modal-wrapper" class="modal1">
+  
+  <div class="modal1-content animate" >
+        
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+      <img src="images/flower.jpg" alt="Avatar" class="avatar">
+      <h1 style="text-align:center">Your product has been successfully added to your cart!</h1>
+    </div>
+
+    <div class="container" >
+    	<button class="btn btn-primary" onclick="document.getElementById('modal-wrapper').style.display='none'" style="width: 80% ;margin-left: 40px" float: middle;"  >Continue Shopping</button>
+    	<form action= "checkout.html">
+    		<button class="btn btn-primary" style="width: 80%; margin-left: 40px"; type="submit">Go to your Cart</button>
+    	</form>
+    	
+      <!-- <input type="text" placeholder="Enter Username" name="uname">
+      <input type="password" placeholder="Enter Password" name="psw">        
+     
+        <button type="submit" >Login</button>
+      
+      <input type="checkbox" style="margin:26px 30px;"> Remember me      
+      <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a> -->
+    </div>
+    
+  </div>
+  
+</div>
+
+<div id="id01" class="modal1">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" >
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+       <label for="Username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="Username" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button onclick="document.getElementById('modal-wrapper').style.display='none'" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div id="id02" class="modal1">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" >
+    <div class="container">
+      <h1>Sign In</h1>
+      <p>Please enter your Username and password to sign in.</p>
+      <hr>
+      <label for="Username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="Username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button onclick="document.getElementById('modal-wrapper').style.display='none'" class="signupbtn">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<script>
+
+// If user clicks anywhere outside of the modal, Modal will close
+
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+	
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+</body>
+
+</html>
