@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="jquery.js"></script> 
+    <script> 
+    $(function(){
+      $("#includedContent").load("index.html"); 
+    });
+    </script> 
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: white
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 180px;
+  height: 195px;
+  border-radius: 50%;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body style="opacity: 0.8; id="includedContent" background="images/pexels-photo-1099680.jpg">
+
+<h2 style="text-align:center; color: white">User Account</h2>
+
+<div class="card" >
+  <img src="images/dog.jpg" alt="Avatar"  class="avatar">
+  <h1>John Doe</h1>
+  <p class="title">CEO & Founder, Example</p>
+  <p>Harvard University</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <div>
+        Twittor: <a href="{{url_for('index')}}">Home</a>
+        {%if current_user.is_anonymous%}
+        <a href="{{url_for('login')}}">Login</a>
+        {%else%}
+        <a href="{{url_for('logout')}}">Logout</a>
+        {%endif%}
+    </div>
+ 
+  
+</div>
+<div >
+  
+<table style="text-align: center; color: black; background-color: white; margin: auto; ">
+        <tr>
+            <td><img src="{{user.avatar(128)}}" alt=""></td>
+            <td>
+                <p>
+                    <b>{{user.username}}</b>
+                    <p>
+                        Follower {{user.followers.count()}} Following {{user.followed.count()}}
+                    </p>
+                    <form action="" method="post">
+                        {%if user != current_user%}
+                        {%if current_user.is_following(user)%}
+                        <input type="submit" name="request_button" value="Unfollow">
+                        {%else%}
+                        <input type="submit" name="request_button" value="Follow">
+                        {%endif%}
+                        {%endif%}
+                    </form>
+                </p>
+
+                {%if user.about_me%}
+                <p>About Me:{{user.about_me}}</p>
+                {%endif%}
+
+                {%if user.create_time%}
+                <p>Join at: {{user.create_time}}</p>
+                {%endif%}
+                {%if user==current_user%}
+                <p><a href="{{url_for('edit_profile')}}">Edit your profile</a></p>
+                {%endif%}
+            </td>
+        </tr>
+    </table>
+    {%for post in posts%}
+    <table style="text-align: center; color: black; background-color: white; margin:auto;">
+        <tr>
+            <td><img src="{{user.avatar()}}" alt=""></td>
+            <td><p>{{post.author.username}} says: <b>{{post.body}}</b></p></td>
+        </tr>
+    </table></div>
+
+        {%endfor%}
+
+    <!-- Featured Products -->
+  <div class="container">
+    <h1 class="text-center">World Class Products</h1>
+    <div class="row">
+      <!-- Product 1 -->
+      <div class="col-sm-6 col-md-3" id = "C1">
+        <div class="thumbnail featured-product">
+          <a href="#">
+            <img src="images/pepper.jpg" alt="">
+          </a>
+          <div class="caption">
+            <h3>Premium Niche</h3>
+            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+            <p class="price">$10.45</p>
+
+            <!-- Input Group -->
+            <form id = "form1" action="checkout.html">
+            <div class="input-group" >
+              <input type="number" class="form-control" value="1" name="number" style="margin: auto">
+                <input type = "hidden" name="productName" value = "Premium Niche">
+                  <span class="input-group-btn">
+                    <button style="margin: auto"  class="btn btn-primary" type="submit">
+                      <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+                       Add to Cart
+                    </button> 
+                  </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail featured-product">
+          <a href="#">
+            <img src="images/jars.jpg" alt="">
+          </a>
+          <div class="caption">
+            <h3>Handy Holistic</h3>
+            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+            <p class="price"><s>$24.99</s> $18.99</p>
+
+            <!-- Input Group -->
+            <form action="checkout.html">
+            <div class="input-group">
+              <input type="number" class="form-control" value="1" style="margin: auto">
+              <span class="input-group-btn">
+                <button style="margin: auto"  class="btn btn-primary" type="submit">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+                  Add to Cart
+                </button>
+              </span>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail featured-product">
+          <a href="#">
+            <img src="images/pot.jpg" alt="">
+          </a>
+          <div class="caption">
+            <h3>Seamless Strategic</h3>
+            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+            <p class="price">$11.50</p>
+
+            <!-- Input Group -->
+            <form action="checkout.html">
+            <div class="input-group">
+              <input type="number" class="form-control" value="1" style="margin: auto">
+              <span class="input-group-btn">
+                <button style="margin: auto"  class="btn btn-primary" type="submit">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+                  Add to Cart
+                </button>
+              </span>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail featured-product">
+          <a href="#">
+            <img src="images/teapot.jpg" alt="">
+          </a>
+          <div class="caption">
+            <h3>Maintained Strip</h3>
+            <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+            <p class="price">$45.50</p>
+
+            <!-- Input Group -->
+            <form action="checkout.html">
+            <div class="input-group">
+              <input type="number" class="form-control" value="1" style="margin: auto">
+              <span class="input-group-btn">
+                <button class="btn btn-primary"  type="submit" style="margin: auto">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 
+                  Add to Cart
+                </button>
+              </span>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /.container -->
+
+    
+
+</body>
+</html>

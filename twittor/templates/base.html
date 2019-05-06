@@ -9,6 +9,7 @@
     <title>welocom to Twittor</title>
 </head>
 <body>
+    {%block content%}
     <div>
         Twittor: <a href="{{url_for('index')}}">Home</a>
         {%if current_user.is_anonymous%}
@@ -19,5 +20,5 @@
     </div>
     
     <hr>
-    {%block content%}{%endblock%}
+    {%endblock%}
 </body>
